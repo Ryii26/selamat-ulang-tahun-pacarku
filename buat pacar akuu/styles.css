@@ -1,0 +1,122 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('diw.jpg'); /* Ganti dengan path gambar Anda */
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container */
+.container {
+    position: relative;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;
+}
+
+/* Balon Hiasan */
+.container::before, .container::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 70px;
+    background: radial-gradient(circle, #ff69b4 30%, #ff1493 70%);
+    border-radius: 50% 50% 0 0;
+    left: 20%;
+    bottom: 100%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.container::after {
+    left: 80%;
+}
+
+/* Tali Balon */
+.container::before::after, .container::after::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 60px;
+    background: #000;
+    left: 50%;
+    bottom: 100%;
+    transform: translateX(-50%);
+}
+
+/* Kue Ulang Tahun */
+.cake {
+    width: 100px;
+    height: 60px;
+    background: #ffcc00; /* Warna kue */
+    border-radius: 10px;
+    position: relative;
+    margin: 20px auto;
+}
+
+.candle {
+    width: 10px;
+    height: 20px;
+    background: #ff0000; /* Warna lilin */
+    position: absolute;
+    top: -20px;
+    left: 45%;
+    border-radius: 5px;
+}
+
+/* Heading */
+h1 {
+    font-size: 2.5em;
+    color: #ff69b4;
+    margin-bottom: 20px;
+}
+
+/* Deskripsi */
+.description, p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+/* Tombol */
+#celebrateButton {
+    background-color: #ff69b4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#celebrateButton:hover {
+    background-color: #ff1493;
+}
+
+/* Link */
+a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
